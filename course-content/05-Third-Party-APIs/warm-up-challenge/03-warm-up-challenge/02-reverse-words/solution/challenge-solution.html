@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Reverse words</title>
+</head>
+
+<body>
+  <script>
+
+    function reverseWords(str) {
+      sentence = str.split(" ");
+      for (var i = 0; i < sentence.length; i++) {
+        sentence[i] = sentence[i].split("").reverse().join("");
+      }
+      return sentence.join(" ");
+    }
+
+    var result = reverseWords("Hello World");
+    console.log(result);
+  </script>
+</body>
+
+</html>

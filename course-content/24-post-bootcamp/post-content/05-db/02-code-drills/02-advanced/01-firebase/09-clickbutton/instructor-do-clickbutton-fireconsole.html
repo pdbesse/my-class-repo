@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Click Button with Firebase!</title>
+
+</head>
+
+<body>
+
+  <!-- Text with spanID that gets filled with content -->
+  <p>After clicking, go to the firebase database to see the click counter go up.</p>
+
+
+  <!-- Button -->
+  <button id="click-button">Click Me!!!!</button>
+
+  <!-- JQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- ================================================================================== -->
+
+  <!-- Firebase Core JavaScript Link -->
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+
+   <!-- Specific Firebase products we want -->
+   <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+
+  <script>
+    // Initialize Firebase
+    // This is the code we copied and pasted from our app page
+    var firebaseConfig = {
+      apiKey: "AIzaSyDBLmXhkbnFXUU61B0SCBRX1d7sFL_k87A",
+      authDomain: "class-demo-b7f73.firebaseapp.com",
+      databaseURL: "https://class-demo-b7f73.firebaseio.com",
+      projectId: "class-demo-b7f73",
+      storageBucket: "",
+      messagingSenderId: "652912100467",
+      appId: "1:652912100467:web:17d9589c091e13bb66d606"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    // Variables
+    // ================================================================================
+
+    // Get a reference to the database service
+    var database = firebase.database();
+
+    // Initializing our click count at 0
+    var clickCounter = 0;
+
+    // Functions
+    // ================================================================================
+
+    // On Click
+    $("#click-button").on("click", function() {
+
+      // Add 1 to clickCounter
+      clickCounter++;
+
+      // **** Store Click Data to Firebase in a JSON property called clickCount *****
+      // **** Note how we are using the Firebase .set() method ****
+      // **** .ref() refers to the path you want to save your data to
+      // **** Since we left .ref() blank, it will save to the root directory
+      database.ref().set({
+        clickCount: clickCounter
+      });
+
+      // Now! go to https://fir-click-counter-7cdb9.firebaseio.com/ to see the impact to the DB
+    });
+  </script>
+
+</body>
+
+</html>

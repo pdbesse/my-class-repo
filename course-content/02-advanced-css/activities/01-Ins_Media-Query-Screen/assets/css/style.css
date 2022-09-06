@@ -1,0 +1,91 @@
+* {
+  /*//https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing*/
+  /*The box-sizing CSS property sets how the total width and height of an element is calculated.*/
+  /*The width and height properties include the content, padding, and border, but do not include the margin.*/
+  /*border-box tells the browser to account for any border and padding in the values you specify for an element's width and height. If you set an element's width to 100 pixels, that 100 pixels will include any border or padding you added, and the content box will shrink to absorb that extra width. This typically makes it much easier to size elements.*/
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+header {
+  padding: 60px;
+  text-align: center;
+  background: #13293d;
+  color: #fff;
+}
+
+nav {
+  display: flex;
+  background-color: #d8a47f;
+}
+
+nav p {
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+}
+
+aside {
+  flex: 30%;
+  background-color: #b9c6ae;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+section {
+  flex: 70%;
+  background-color: #fff;
+  padding: 20px;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #13293d;
+  color: #fff;
+}
+
+/* Image Placeholders */
+.sample-img {
+  background-color: #fff;
+  width: 100%;
+  padding: 20px;
+  height: 200px;
+  border: 1px solid black;
+}
+
+/* When using `max-width` as the breakpoint, you must go from widest to narrowest to avoid conflict */
+/*common breakpoints for widths of devices:
+  • 320px — 480px: Mobile devices
+  • 481px — 768px: iPads, Tablets
+  • 769px — 1024px: Small screens, laptops
+  • 1025px — 1200px: Desktops, large screens*/
+
+/* Tablets - header changes color */
+@media screen and (max-width: 992px) {
+  header {
+    background: #772014;
+  }
+}
+
+/* Large smartphones - navbar changes color */
+@media screen and (max-width: 768px) {
+  nav {
+    background-color: #bb8588;
+  }
+  
+}
+
+/* Small smartphones - image placeholders change color */
+@media screen and (max-width: 576px) {
+  .sample-img {
+    background-color: #8ac4ff;
+  }
+}

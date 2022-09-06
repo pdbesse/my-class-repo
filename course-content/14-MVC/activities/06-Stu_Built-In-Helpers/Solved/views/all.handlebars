@@ -1,0 +1,66 @@
+<div class="menu-container">
+  <div class="card-header col-md-10">
+    <h2>
+      &#127869 Current Menu
+    </h2>
+  </div>
+  <!-- For each dish in the array of dish objects, the following <div> will be rendered. -->
+  {{#each dishes as |dish|}}
+    <div class="dish col-md-6">
+      <!-- We use dish.id instead of <od> and <li> elements. -->
+      <p>
+        {{dish.id}}.
+        {{dish.dish_name}}
+        {{#unless dish.has_nuts}}
+      <!-- This code will be rendered if the condition (has_nuts) is not Truthy  -->
+          <span >
+            🔴
+          </span>
+      <!-- Below, we end the #if helper -->
+      {{/unless}}
+      {{#if dish.has_nuts}}
+    <!-- This code will be rendered if the condition (has_nuts) is truthy -->
+          <span >
+             ✅ 
+          <span >
+        <!-- Below, we end the #if helper -->
+      {{/if}}
+      </p>
+       
+    </div>
+    <div class="col-md-6">
+      <p></p>
+    </div>
+  {{/each}}
+
+
+   <div class="card-header col-md-10">
+    <h2>
+      Alternative if/else
+    </h2>
+  </div>
+
+    {{#each dishes as |dish|}}
+    <div class="dish col-md-6">
+      <!-- We use dish.id instead of <od> and <li> elements. -->
+      <p>
+        {{dish.id}}.
+        {{dish.dish_name}}
+        {{dish.has_nuts}}
+
+        {{#if dish.has_nuts}}
+            <span >
+              ✅ 
+            <span >
+        {{else}}
+           <span >
+             🔴
+            </span>
+        {{/if}}
+      </p>
+    </div>
+    <div class="col-md-6">
+      <p></p>
+    </div>
+  {{/each}}
+</div>

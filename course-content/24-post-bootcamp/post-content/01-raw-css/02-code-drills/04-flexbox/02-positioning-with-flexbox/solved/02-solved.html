@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Positioning with Flexbox</title>
+
+   <style>
+   /* 
+      SOLUTION CSS: Notice that the child element
+      styles have not been changed. We only added
+      styles to the PARENT elements.
+      =============================================
+   */
+      #parent-center {
+         display: flex;
+         justify-content: center;
+         background-color: #800080;
+      }
+
+      /* NOTE: This one is on the left by default, but these are the flexbox styles you would use if you ever need to FORCE an element to be positioned at the 'start' of a parent element */
+      #parent-left {
+         display: flex;
+         justify-content: flex-start;
+         background-color: #0000c9;
+      }
+
+      #parent-right {
+         display: flex;
+         justify-content: flex-end;
+         background-color: #c90000;
+      }
+
+      .child {
+         color: white;
+      }
+
+      /* ======================================== */
+   </style>
+
+</head>
+
+<body>
+
+   <h4>CENTER:</h4>
+   <div id="parent-center">
+      <div class="child">
+         I want to be in the center!
+      </div>
+   </div>
+   <br>
+   <hr>
+
+   <h4>LEFT:</h4>
+   <div id="parent-left">
+      <div class="child">
+         I want to be on the left!
+      </div>
+   </div>
+   <br>
+   <hr>
+
+   <h4>RIGHT:</h4>
+   <div id="parent-right">
+      <div class="child">
+         I want to be on the right!
+      </div>
+   </div>
+
+</body>
+
+</html>

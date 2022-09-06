@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Fido",
+    "species": "dog",
+    "age": 2
+  },
+  {
+    "name": "Wally",
+    "species": "dog",
+    "age": 6
+  },
+  {
+    "name": "Penny",
+    "species": "dog",
+    "age": 1
+  },
+  {
+    "name": "Bandit",
+    "species": "dog",
+    "age": 7
+  },
+  {
+    "name": "Loki",
+    "species": "dog",
+    "age": 5
+  }
+]

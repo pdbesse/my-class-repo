@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>isPangram</title>
+</head>
+
+<body>
+  <script>
+    var isPangram = function (str) {
+      str = str.toLowerCase();
+      var alphabet = "abcdefghijklmnopqrstuvwxyz";
+      for (var i = 0; i < alphabet.length; i++) {
+        if (!str.includes(alphabet[i])) {
+          return false;
+        }
+      }
+      return true;
+    }
+
+    var result = isPangram("Five hexing wizard boats jump quickly");
+    console.log(result);
+  </script>
+</body>
+
+</html>

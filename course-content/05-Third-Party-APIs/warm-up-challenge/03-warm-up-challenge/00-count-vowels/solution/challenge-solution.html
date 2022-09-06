@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Find maximum</title>
+</head>
+
+<body>
+  <script>
+
+    var countVowels = function (str) {
+      var count = 0;
+      var input = str.toLowerCase();
+      for (var i = 0; i < input.length; i++) {
+        if (input[i] === "a" || input[i] === "e" || input[i] === "i" || input[i] === "o" || input[i] === "u") {
+          count++;
+        }
+      }
+      return count;
+    }
+
+    // OR
+
+    // var countVowels = function (str) {
+    //   var count = 0;
+    //   var input = str.toLowerCase();
+    //   var vowelArr = ["a", "e", "i", "o", "u"];
+    //   for (var i = 0; i < input.length; i++) {
+    //     if (vowelArr.includes(input[i])) {
+    //       count++;
+    //     }
+    //   }
+    //   return count;
+    // }
+    
+    var result = countVowels("hello");
+    console.log(result);
+  </script>
+</body>
+
+</html>

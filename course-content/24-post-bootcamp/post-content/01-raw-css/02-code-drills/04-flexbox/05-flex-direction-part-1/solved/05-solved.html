@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Flex Direction</title>
+
+   <style>
+      /* SOLUTION CSS */
+      /* ======================================== */
+
+      #parent-row {
+         display: flex; /* sets up flexbox on this parent element */
+         align-items: center; /* aligns child elements vertically */
+         flex-direction: row; /* organizes child elements in row from left to right */
+      }
+
+      #parent-row-reverse {
+         display: flex; /* sets up flexbox on this parent element */
+         align-items: center; /* aligns child elements vertically */
+         flex-direction: row-reverse; /* organizes child elements in row from right to left */
+      }
+
+      #parent-row-reverse-top {
+         display: flex;
+         flex-direction: row-reverse;
+         align-items: flex-start;
+      }
+
+      #parent-row-reverse-bottom {
+         display: flex;
+         flex-direction: row-reverse;
+         align-items: flex-end;
+      }
+
+      /***** BONUS: *****/
+      #parent-row-reverse-left {
+         display: flex;
+         flex-direction: row-reverse;
+         justify-content: flex-end;
+         align-items: flex-start;
+      }
+
+      /* ======================================== */
+
+      .parent {
+         width: 100vw;
+         height: 150px;
+         padding: 5px;
+         background-color: purple;
+         box-sizing: border-box;
+      }
+
+      .child {
+         color: white;
+         border: 1px solid white;
+         padding: 5px;
+      }
+
+      body {
+         margin: 0;
+         padding-bottom: 50px;
+      }
+   </style>
+
+</head>
+
+<body>
+
+   <h4>FLEX-DIRECTION: ROW</h4>
+   <div id="parent-row" class="parent">
+      <div class="child">
+         ONE
+      </div>
+      <div class="child">
+         TWO
+      </div>
+      <div class="child">
+         THREE
+      </div>
+   </div>
+
+
+   <h4>FLEX-DIRECTION: ROW-REVERSE</h4>
+   <div id="parent-row-reverse" class="parent">
+      <div class="child">
+         ONE
+      </div>
+      <div class="child">
+         TWO
+      </div>
+      <div class="child">
+         THREE
+      </div>
+   </div>
+
+
+   <h4>TOP-RIGHT REVERSE:</h4>
+   <div id="parent-row-reverse-top" class="parent">
+      <div class="child">
+         ONE
+      </div>
+      <div class="child">
+         TWO
+      </div>
+      <div class="child">
+         THREE
+      </div>
+   </div>
+
+
+   <h4>BOTTOM-RIGHT REVERSE:</h4>
+   <div id="parent-row-reverse-bottom" class="parent">
+      <div class="child">
+         ONE
+      </div>
+      <div class="child">
+         TWO
+      </div>
+      <div class="child">
+         THREE
+      </div>
+   </div>
+
+
+   <h4>TOP-LEFT REVERSE:</h4>
+   <div id="parent-row-reverse-left" class="parent">
+      <div class="child">
+         ONE
+      </div>
+      <div class="child">
+         TWO
+      </div>
+      <div class="child">
+         THREE
+      </div>
+   </div>
+
+</body>
+
+</html>

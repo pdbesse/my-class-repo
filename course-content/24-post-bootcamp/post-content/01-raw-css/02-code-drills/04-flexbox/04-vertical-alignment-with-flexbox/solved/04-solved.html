@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Vertical Alignment/Positioning with Flexbox</title>
+
+   <style>
+
+      /* SOLUTION CSS */
+      /* ======================================== */
+
+      #parent-center {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+
+      #parent-vertical-center-left {
+         display: flex;
+         align-items: center;
+      }
+
+      #parent-vertical-center-right {
+         display: flex;
+         justify-content: flex-end;
+         align-items: center;
+      }
+      
+      #parent-horizontal-center-top {
+         display: flex;
+         justify-content: center;
+         align-items: flex-start;
+      }
+      
+      #parent-horizontal-center-bottom {
+         display: flex;
+         justify-content: center;
+         align-items: flex-end;
+      }
+
+      /* ======================================== */
+
+      .parent {
+         width: 100vw;
+         height: 150px;
+         padding: 5px;
+         background-color: purple;
+         box-sizing: border-box;
+      }
+
+      .child {
+         color: white;
+         border: 1px solid white;
+         padding: 5px;
+      }
+
+      body {
+         margin: 0;
+         padding-bottom: 50px;
+      }
+
+   </style>
+
+</head>
+
+<body>
+
+
+   <h4>ALIGN-ITEMS EXAMPLE:</h4>
+   <div id="parent-center" class="parent">
+      <div class="child">
+         I want to be in the center!
+      </div>
+   </div>
+
+
+   <h4>VERTICALLY CENTERED (LEFT SIDE):</h4>
+   <div id="parent-vertical-center-left" class="parent">
+      <div class="child">
+         I want to be vertically centered on the left side!
+      </div>
+   </div>
+
+
+   <h4>VERTICALLY CENTERED (RIGHT SIDE):</h4>
+   <div id="parent-vertical-center-right" class="parent">
+      <div class="child">
+         I want to be vertically centered on the right side!
+      </div>
+   </div>
+
+
+   <h4>HORIZONTALLY CENTERED (TOP):</h4>
+   <div id="parent-horizontal-center-top" class="parent">
+      <div class="child">
+         I want to be horizontally centered on the top!
+      </div>
+   </div>
+
+
+   <h4>HORIZONTALLY CENTERED (BOTTOM):</h4>
+   <div id="parent-horizontal-center-bottom" class="parent">
+      <div class="child">
+         I want to be horizontally centered on the bottom!
+      </div>
+   </div>
+
+</body>
+
+</html>

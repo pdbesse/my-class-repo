@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Vertical Alignment/Positioning with Flexbox</title>
+
+   <style>
+
+      /* APPLY YOUR CSS HERE */
+      /* ======================================== */
+
+      #parent-center {
+         display: flex; /* sets up flexbox on this parent element */
+         justify-content: center; /* handles horizontal positioning of child elements */
+         align-items: center; /* handles vertical positioning of child elements */
+      }
+
+      #parent-vertical-center-left {
+      }
+
+      #parent-vertical-center-right {
+      }
+      
+      #parent-horizontal-center-top {
+      }
+      
+      #parent-horizontal-center-bottom {
+      }
+
+      /* ======================================== */
+
+      .parent {
+         width: 100vw;
+         height: 150px;
+         padding: 5px;
+         background-color: purple;
+         box-sizing: border-box;
+      }
+
+      .child {
+         color: white;
+         border: 1px solid white;
+         padding: 5px;
+      }
+
+      body {
+         margin: 0;
+         padding-bottom: 50px;
+      }
+
+   </style>
+
+</head>
+
+<body>
+
+   <!--
+      We've seen the "justify-content" Flexbox property, which allows us to control horizontal positioning and/or spacing of elements. So how do we control the VERTICAL positioning and spacing??
+
+      Flexbox also gives us the "align-items" property, which can use all the same values (e.g. center, flex-start, flex-end, space-evenly, space-between) as the "justify-content" propery.
+
+      If you open this HTML in your browser, you'll see the below child is positioned exactly in the center of the #parent-center element. This is because #parent-center has "justify-content: center" for horizontal centering AND "align-items: center" for vertical centering.
+   -->
+   <h4>ALIGN-ITEMS EXAMPLE:</h4>
+   <div id="parent-center" class="parent">
+      <div class="child">
+         I want to be in the center!
+      </div>
+   </div>
+
+
+   <!--
+      ***** YOUR WORK STARTS HERE *****
+
+      Only add CSS. You do not need to alter the HTML. When you are done, your site should look like 04-example-1-image.png and 04-example-2-image.png.
+
+
+      Apply Flexbox properties to #parent-vertical-center-left. The child should be vertically centered on the left side of its parent.
+   -->
+   <h4>VERTICALLY CENTERED (LEFT SIDE):</h4>
+   <div id="parent-vertical-center-left" class="parent">
+      <div class="child">
+         I want to be vertically centered on the left side!
+      </div>
+   </div>
+
+
+   <!--
+      Apply a mixture of the flexbox properties you have learned so far to position the child of #parent-vertical-center-right as follows:
+         - vertically centered
+         - positioned to the right side of its parent
+
+      Covered so far:
+
+         Properties:                      Values:
+            - justify-content                - center
+            - align-items                    - flex-end
+                                             - flex-start
+                                             - space evenly
+                                             - space-between
+   -->
+   <h4>VERTICALLY CENTERED (RIGHT SIDE):</h4>
+   <div id="parent-vertical-center-right" class="parent">
+      <div class="child">
+         I want to be vertically centered on the right side!
+      </div>
+   </div>
+
+
+   <!--
+      Apply Flexbox properties to #parent-horizontal-center-top. The child should be horizontally centered at the top of its parent (hint available below if needed).
+   -->
+   <h4>HORIZONTALLY CENTERED (TOP):</h4>
+   <div id="parent-horizontal-center-top" class="parent">
+      <div class="child">
+         I want to be horizontally centered on the top!
+      </div>
+   </div>
+
+   <!--
+      Apply Flexbox properties to #parent-horizontal-center-bottom. The child should be horizontally centered at the bottom of its parent (hint available below if needed).
+   -->
+   <h4>HORIZONTALLY CENTERED (BOTTOM):</h4>
+   <div id="parent-horizontal-center-bottom" class="parent">
+      <div class="child">
+         I want to be horizontally centered on the bottom!
+      </div>
+   </div>
+
+   <!--
+      HINT IF NEEDED
+            |
+            |
+            |
+            |
+            |
+            |
+            |
+            |
+            |
+            |
+            |
+            |
+            |
+            |
+            v
+            
+      "justify-content" handles horizontal positioning, so "justify-content: flex-start" positions elements to the left and "justify-content: flex-end" positions them to the right. "align-items" handles verical positioning, so "align-items: flex-start" positions elements to the top and "align-items: flex-end" positions them to the bottom.
+   -->
+
+</body>
+
+</html>

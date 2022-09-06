@@ -1,0 +1,11 @@
+<section class="card">
+  <!-- The contents of this card links to the gallery page using the gallery ID -->
+  <a href="/gallery/{{id}}">
+    <!-- The card contains the gallery name as the card header -->
+    <header>{{name}}</header>
+    <!-- The card contains the first painting of the gallery -->
+    <!--To reference a property that is not a valid identifier, you can use segment-literal notation, [. You may not include a closing ] in a path-literal, but all other characters are allowed. -->
+    <!-- https://handlebarsjs.com/guide/expressions.html#path-expressions-->
+    <img src="/images/{{paintings.[0].filename}}" alt="{{paintings.[0].description}}">
+  </a>
+</section>

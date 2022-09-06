@@ -1,0 +1,50 @@
+[
+    {
+        "username": "j",
+        "topic": "UX",
+        "tip": "Don't use comic sans",
+        "tip_id": "37t8"
+    },
+    {
+        "username": "Sarah",
+        "topic": "UI",
+        "tip": "Make your application accessible by adding alt properties to elements",
+        "tip_id": "701e"
+    },
+    {
+        "username": "CoolGuy1",
+        "tip": "Don't use three different fonts on the same page",
+        "topic": "UX",
+        "tip_id": "0a46"
+    },
+    {
+        "username": "Sage",
+        "tip": "Colors are nice",
+        "topic": "UX",
+        "tip_id": "d6cc"
+    },
+    {
+        "username": "Asher",
+        "tip": "Call to action should be front and center",
+        "topic": "UX",
+        "tip_id": "ee38"
+    },
+    {
+        "username": "Fred",
+        "tip": "Sites with Dark Backdrops always look cool",
+        "topic": "UX",
+        "tip_id": "ff60"
+    },
+    {
+        "username": "Stay above the fold",
+        "tip": "Farley",
+        "topic": "UX",
+        "tip_id": "a00d"
+    },
+    {
+        "username": "Bob",
+        "tip": "Don't use more than 4 fonts",
+        "topic": "UX",
+        "tip_id": "6da8"
+    }
+]

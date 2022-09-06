@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Flex</title>
+
+   <style>
+      /* SOLUTION CSS */
+      /* ======================================== */
+
+      /* PROBLEM A */
+
+      #child-1a {
+         flex: 1;
+      }
+
+      #child-2a {
+         flex: 3;
+      }
+
+      #child-3a {
+         flex: 2;
+      }
+
+      #child-4a {
+         flex: 3;
+      }
+
+      #child-5a {
+         flex: 1;
+      }
+
+      /* PROBLEM B */
+
+      #child-1b {
+         flex: 3;
+      }
+
+      #child-2b {
+         flex: 1;
+      }
+
+      #child-3b {
+         flex: 2;
+      }
+
+      #child-4b {
+         flex: 12;
+      }
+
+      #child-5b {
+         flex: 2;
+      }
+
+      #child-6b {
+         flex: 1;
+      }
+
+      #child-7b {
+         flex: 3;
+      }
+
+      /* ======================================== */
+
+
+      /* EXAMPLE CSS */
+      /* ======================================== */
+
+      .parent {
+         display: flex;
+         height: 200px;
+         width: 100vw;
+         background-color: purple;
+      }
+
+      .child {
+         margin: 10px;
+         padding: 10px;
+         color: white;
+         border: 1px solid white;
+      }
+
+      .flex-child-1 {
+         flex: 1;
+      }
+
+      .flex-child-2 {
+         flex: 2;
+      }
+
+      .flex-child-3 {
+         flex: 3;
+      }
+
+      /* ======================================== */
+
+      body {
+         margin: 0;
+         padding-bottom: 100px;
+         letter-spacing: 1px;
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+   </style>
+
+</head>
+
+<body>
+
+   <h4>EXAMPLE 1 ( TOTAL = 4 )</h4>
+   <div class="parent">
+      <div class="child flex-child-1">
+         CSS: "flex: 1"
+      </div>
+      <div class="child flex-child-1">
+         CSS: "flex: 1"
+      </div>
+      <div class="child flex-child-1">
+         CSS: "flex: 1"
+      </div>
+      <div class="child flex-child-1">
+         CSS: "flex: 1"
+      </div>
+   </div>
+
+   <h4>EXAMPLE 2 ( TOTAL = 9 )</h4>
+   <div class="parent">
+      <div class="child flex-child-1">
+         1/9
+      </div>
+      <div class="child flex-child-2">
+         2/9
+      </div>
+      <div class="child flex-child-3">
+         3/9
+      </div>
+      <div class="child flex-child-2">
+         2/9
+      </div>
+      <div class="child flex-child-1">
+         1/9
+      </div>
+   </div>
+
+   <h4>PROBLEM A</h4>
+   <div class="parent">
+      <div class="child" id="child-1a">
+         1/10
+      </div>
+      <div class="child" id="child-2a">
+         3/10
+      </div>
+      <div class="child" id="child-3a">
+         2/10
+      </div>
+      <div class="child" id="child-4a">
+         3/10
+      </div>
+      <div class="child" id="child-5a">
+         1/10
+      </div>
+   </div>
+
+   <h4>PROBLEM B</h4>
+   <div class="parent">
+      <div class="child" id="child-1b"></div>
+      <div class="child" id="child-2b"></div>
+      <div class="child" id="child-3b"></div>
+      <div class="child" id="child-4b"></div>
+      <div class="child" id="child-5b"></div>
+      <div class="child" id="child-6b"></div>
+      <div class="child" id="child-7b"></div>
+   </div>
+
+</body>
+
+</html>

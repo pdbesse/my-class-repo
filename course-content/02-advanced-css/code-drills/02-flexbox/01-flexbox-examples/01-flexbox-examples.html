@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Flexbox Examples</title>
+
+   <!-- READ THE INFO IN THE <body> FIRST -->
+
+   <style>
+
+   /* EXAMPLE 1: MARGIN 0 AUTO STYLES */
+   /* =============================== */
+   
+   #example-child-1 {
+      color: white;
+      text-align: center;
+      background-color: purple;
+      
+      width: 300px; /* If no width is defined, auto-margin will not work. */
+      margin: 0 auto; /* Auto-margin on left and right for centering. */
+   }
+   
+
+   /* EXAMPLE 2: FLEXBOX STYLES */
+   /* ============================== */
+
+   #example-parent-2 {
+      display: flex; /* Sets up Flexbox on parent. EVERY FLEXBOX NEEDS THIS PROPERTY. */
+      justify-content: center; /* Children of this element will be centered horizontally. */
+   }
+   
+   #example-child-2 {
+      color: white;
+      background-color: blue;
+   }
+   
+   </style>
+
+</head>
+
+
+<body>
+
+<!--
+   Open this HTML in your browser. You should see two divs that are centered on the page.
+   
+   EXAMPLE 1: MARGIN: 0 AUTO
+   ========================================================================
+
+   This example is centered with the "margin: 0 auto" trick. For this trick to work, the element you are trying to center (in this case it's #example-child-1) has to have a width defined in the CSS. #example-child-1 has "width: 300px" and "margin: 0 auto", so it is centered within its parent element, #example-parent-1.
+-->
+
+   <h4>EXAMPLE 1:</h4>
+   <div id="example-parent-1">
+      <div id="example-child-1">
+         I'm centered using auto-margin!
+      </div>
+   </div>
+   
+   <br>
+   <hr>
+
+<!--
+   EXAMPLE 2: HOW IS FLEXBOX DIFFERENT?
+   ========================================================================
+
+   This example is centered with Flexbox. Using Flexbox is different becauase you do not apply styles to the element you want to center. Instead, you apply styles to the PARENT of the element you want to center. To apply Flexbox to #example-parent-2, you'd do the following:
+
+   - Add "display: flex" CSS property - This indicates that you want to apply Flexbox properties to this element. YOU ADD THIS EVERY TIME YOU USE FLEXBOX ON AN ELEMENT.
+
+   - Add "justify-content: center" CSS property - This indicates that you want to horizontally center the child element(s).
+
+   Check out the CSS styles in the <head> above to compare both examples. After that, move on to 02-positioning-with-flexbox.
+-->
+
+   <h4>EXAMPLE 2:</h4>
+   <div id="example-parent-2">
+      <div id="example-child-2">
+         I'm centered using flexbox!
+      </div>
+   </div>
+
+</body>
+
+
+</html>

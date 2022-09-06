@@ -1,0 +1,15 @@
+{
+  "name": "google",
+  "version": "1.0.0",
+  "description": "A minimalistic searching function",
+  "main": "google.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["google", "search engine", "not bing"],
+  "author": "Sajeel",
+  "license": "MIT",
+  "dependencies": {
+    "opn": "^6.0.0"
+  }
+}

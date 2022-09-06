@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Find Average</title>
+</head>
+
+<body>
+  <script>
+
+    var average = function (numArr) {
+      var sum = 0;
+      for (var i = 0; i < numArr.length; i++) {
+        sum = sum + numArr[i];
+      }
+      return sum / numArr.length;
+    }
+
+    var result = average([1, 4, 7]);
+    console.log(result);
+  </script>
+</body>
+
+</html>

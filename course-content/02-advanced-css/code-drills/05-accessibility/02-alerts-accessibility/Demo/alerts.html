@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Alerts</title>
+
+</head>
+
+<body>
+    <div class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">Alerts and Accessibility</h1>
+            <p class="lead text-muted">An alert signals to the user that there is some very important information on the
+                page. As such, any information that is labeled as an alert will be read to a screen reader immediately
+                when they load the page, even if that alert is in the middle or at the end of the page.</p>
+        </div>
+    </div>
+
+    <main role="main">
+
+        <div class="container">
+            <div class="alert alert-success" role="alert" id="login-success">
+                Logged in successfully!
+            </div>
+
+            <div class="title">
+                <h1>Bad Alerts
+                    <button class="btn btn-danger" id="bad-alerts">Open</button>
+                </h1>
+                <div id="bad-alerts-container"></div>
+            </div>
+
+            <div class="title">
+                <h1>Good Alerts
+                    <button class="btn btn-success" id="good-alerts">Open</button>
+                </h1>
+                <div id="good-alerts-container"></div>
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="/docs/4.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+    crossorigin="anonymous"></script>
+<script src="./app.js"></script>
+
+</html>

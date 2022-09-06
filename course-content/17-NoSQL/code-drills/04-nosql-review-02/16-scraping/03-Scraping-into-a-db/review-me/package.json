@@ -1,0 +1,19 @@
+{
+  "name": "node_starter_cheerio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.4",
+    "cheerio": "*",
+    "express": "^4.17.3",
+    "mongojs": "^3.1.0"
+  }
+}

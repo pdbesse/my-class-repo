@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Submit your Profile with us!</title>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <!-- Form -->
+            <form>
+                <div class="form-group">
+                    <label for="formGroupFirstName">First Name</label>
+                    <input type="text" class="form-control" id="firstname" placeholder="First Name">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupLastName">Last Name</label>
+                    <input type="text" class="form-control" id="lastname" placeholder="Last Name">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                    <label for="radio">Are you atleast 18 years older?</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="age" id="radioYes" value="yes">
+                    <label class="form-check-label" for="inlineRadio1">Yes</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="age" id="radioNo" value="no">
+                    <label class="form-check-label" for="inlineRadio2">No</label>
+                </div><br><br>
+                <div class="form-group">
+                    <label for="checkbox">Preferred Locations</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input position-static" type="checkbox" name="location" id="SanJose"
+                        value="San Jose">
+                    <label class="form-check-label" for="SanJose">
+                        San Jose
+                    </label>
+                    <br>
+                    <input class="form-check-input position-static" type="checkbox" name="location" id="Milpitas"
+                        value="Milpitas">
+                    <label class="form-check-label" for="Milpitas">
+                        Milpitas
+                    </label>
+                    <br>
+                    <input class="form-check-input position-static" type="checkbox" name="location" id="SanFrancisco"
+                        value="San Francisco">
+                    <label class="form-check-label" for="SanFrancisco">
+                        San Francisco
+                    </label>
+                    <br>
+                    <input class="form-check-input position-static" type="checkbox" name="location" id="SantaClara"
+                        value="Santa Clara">
+                    <label class="form-check-label" for="SantaClara">
+                        Santa Clara
+                    </label>
+                </div><br>
+                <div class="form-group">
+                    <div class="dropdown">
+                        <div class="form-group">
+                            <label for="dropdown">Experience</label>
+                        </div>
+                        <select id="experience">
+                            <option value="1-2 years">1 - 2 Years</option>
+                            <option value="2-4 years">2 - 4 Years</option>
+                            <option value=">4 years"> > 4 Years</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
+            </form>
+            <!-- Modal -->
+            <div class="modal" tabindex="-1" role="dialog" id="response">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Thank You!</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- To hold the thank you note that displays name -->
+                            <p id="text"></p>
+                            <!-- Placeholder to specify the position and email -->
+                            <p id="message"></p>
+                            <!-- Placeholder to store the location preferences -->
+                            <p id="locationPreference"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

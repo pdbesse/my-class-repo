@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Flex Direction</title>
+
+   <style>
+      /* APPLY YOUR CSS HERE */
+      /* ======================================== */
+
+      #parent-row {
+         display: flex; /* sets up flexbox on this parent element */
+         align-items: center; /* aligns child elements vertically */
+         flex-direction: row; /* organizes child elements in row from left to right */
+      }
+
+      #parent-row-reverse {
+         display: flex; /* sets up flexbox on this parent element */
+         align-items: center; /* aligns child elements vertically */
+         flex-direction: row-reverse; /* organizes child elements in row from right to left */
+      }
+
+      #parent-row-reverse-top {
+      }
+
+      #parent-row-reverse-bottom {
+      }
+
+      /***** BONUS: *****/
+      #parent-row-reverse-left {
+      }
+
+      /* ======================================== */
+
+      .parent {
+         width: 100vw;
+         height: 150px;
+         padding: 5px;
+         background-color: purple;
+         box-sizing: border-box;
+      }
+
+      .child {
+         color: white;
+         border: 1px solid white;
+         padding: 5px;
+      }
+
+      body {
+         margin: 0;
+         padding-bottom: 50px;
+      }
+   </style>
+
+</head>
+
+<body>
+
+   <!--
+      So far we've covered the following Flexbox properties:
+
+         Properties:                      Values:
+            - justify-content (horizontal)   - center
+            - align-items (vertical)         - flex-end
+                                             - flex-start
+                                             - space evenly
+                                             - space-between
+
+      All of these properties allow us to control the horizontal and vertical alignment/positioning of elements within a parent element. But what if we want to control the DIRECTION of the children in an element. For this, Flexbox gives us the "flex-direction" CSS property.
+      
+      If you open this HTML in your browser, you'll see that the two examples below have child elements that are organized in opposite directions. 
+      
+      The first example is using "flex-direction: row", which is the default Flexbox direction.
+
+      The second example is using "flex-direction: row-reverse", which starts the row from the opposite side of the parent AND reverses the order of the elements. So, instead of the elements going ONE, TWO, THREE, they go THREE, TWO, ONE.
+   -->
+
+   <h4>FLEX-DIRECTION: ROW</h4>
+   <div id="parent-row" class="parent">
+      <div class="child">
+         ONE
+      </div>
+      <div class="child">
+         TWO
+      </div>
+      <div class="child">
+         THREE
+      </div>
+   </div>
+
+   <h4>FLEX-DIRECTION: ROW-REVERSE</h4>
+   <div id="parent-row-reverse" class="parent">
+      <div class="child">
+         ONE
+      </div>
+      <div class="child">
+         TWO
+      </div>
+      <div class="child">
+         THREE
+      </div>
+   </div>
+
+   <!--
+      ***** YOUR WORK STARTS HERE *****
+
+      Only add CSS. You do not need to alter the HTML. When you are done, your site should look like 05-example-image.png.
+
+      Apply Flexbox properties to #parent-row-reverse-top. The children should be in the top-right corner and organized in reverse order.
+   -->
+
+   <h4>TOP-RIGHT REVERSE:</h4>
+   <div id="parent-row-reverse-top" class="parent">
+      <div class="child">
+         ONE
+      </div>
+      <div class="child">
+         TWO
+      </div>
+      <div class="child">
+         THREE
+      </div>
+   </div>
+
+
+   <!--
+      Apply Flexbox properties to #parent-row-reverse-bottom. The children should be in the bottom-right corner and organized in reverse order.
+   -->
+
+   <h4>BOTTOM-RIGHT REVERSE:</h4>
+   <div id="parent-row-reverse-bottom" class="parent">
+      <div class="child">
+         ONE
+      </div>
+      <div class="child">
+         TWO
+      </div>
+      <div class="child">
+         THREE
+      </div>
+   </div>
+
+
+   <!--
+      ***** BONUS *****
+
+      Apply Flexbox properties to #parent-row-reverse-left. The children should be in the top-left corner and organized in reverse order (hint available below if needed).
+   -->
+
+   <h4>TOP-LEFT REVERSE:</h4>
+   <div id="parent-row-reverse-left" class="parent">
+      <div class="child">
+         ONE
+      </div>
+      <div class="child">
+         TWO
+      </div>
+      <div class="child">
+         THREE
+      </div>
+   </div>
+
+   <!--
+      HINT IF NEEDED
+            |
+            |
+            |
+            |
+            |
+            |
+            |
+            |
+            |
+            |
+            |
+            |
+            |
+            |
+            v
+            
+      The "flex-direction: row-reverse" property reverses the position and ordering of child elements, but it ALSO reverses the positions of "justify-content: flex-start" and "justify-content: flex-end".
+      
+      So when row-reverse is applied, "justify-content: flex-start" will actually position elements to the right instead of the left, and "justify-content: flex-end" will position elements to the left instead of the right.
+   -->
+
+</body>
+
+</html>

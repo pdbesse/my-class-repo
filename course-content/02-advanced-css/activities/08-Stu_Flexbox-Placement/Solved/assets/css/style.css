@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  
+}
+
+header {
+  padding: 40px;
+  text-align: center;
+  background: #13293d;
+  color: #fff;
+}
+
+nav {
+  display: flex;
+  /* Align the child elements to the right side of the parent */
+  /*justify-content: flex-end;*/
+  justify-content: end;
+  background-color: #d8a47f;
+}
+
+nav a {
+  color: #13293d;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #13293d;
+  color: #fff;
+  margin-top: auto;
+}
+
+.product {
+  display: flex;
+  /* Align the child elements to the top of the parent */
+  /*top if flex-direction: column;*/
+  width: 90%;
+  margin: 1% auto;
+}
+
+.product button {
+  font-size: 150%;
+}
+
+.product-slideshow {
+  display: flex;
+  /* Align the child elements to the center of the parent */
+  /*https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-align-items*/
+  /*This defines the default behavior for how flex items are laid out along the cross axis on the current line. */
+  /*Think of it as the justify-content version for the cross-axis */
+  align-items: center;
+  /*By default, the value is stretch, which stretches all flex items to fill the parent in the direction of the cross axis. If the parent doesn't have a fixed width in the cross axis direction, then all flex items will become as long as the longest flex item. This is how our first example had columns of equal height by default.*/
+  /*The center value that we used in our above code causes the items to maintain their intrinsic dimensions, but be centered along the cross axis. This is why our current example's buttons are centered vertically.*/
+  /*https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox#horizontal_and_vertical_alignment*/
+}
+
+.product-image {
+  width: 100%;
+}
+
+.product-details {
+  margin-left: 3%;
+  flex: 0 0 60%;
+}
+
+@media screen and (max-width: 768px) {
+  main,
+  nav,
+  .product {
+    flex-direction: column;
+  }
+
+  .product-slideshow button {
+    /* Removes the slideshow buttons from the document flow */
+    display: none;
+  }
+
+  .product-details {
+    margin-left: 0;
+  }
+}

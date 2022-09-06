@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        footer {
+            position: relative;
+            margin-top: 40px;
+            bottom: 0px;
+            width: 100%;
+            padding: 50px;
+            background-color: #E9ECEF;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        #images {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .drake {
+            width: 200px;
+            height: 200px;
+            border-radius: 3px;
+        }
+    </style>
+
+
+    <title>Images</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="jumbotron text-center">
+            <div class="container">
+                <h1 class="jumbotron-heading">Images</h1>
+                <p class="lead text-muted">When building web pages and applications, there are times when users cannot
+                    view important images or videos. In these cases, developers should ensure that there is alternate
+                    text for assistive technologies to read.</p>
+            </div>
+        </div>
+    </header>
+
+    <main role="main">
+
+        <div class="container">
+
+            <div class="alert alert-warning" role="alert" id="warning">
+                This is a warning!
+            </div>
+
+            <div id="images">
+                <div>
+                    <h2>NO ALT</h2>
+                    <img class="drake"
+                        src="https://pixel.nymag.com/imgs/fashion/daily/2018/06/29/29-drake.w700.h700.jpg">
+                </div>
+                <div>
+                    <h2>ALT TEXT</h2>
+                    <img class="drake"
+                        src="https://pixel.nymag.com/imgs/fashion/daily/2018/06/29/29-drake.w700.h700.jpg"
+                        alt="Rapper Drake looking sad">
+                </div>
+                <div>
+                    <h2>BLANK ALT</h2>
+                    <img class="drake"
+                        src="https://pixel.nymag.com/imgs/fashion/daily/2018/06/29/29-drake.w700.h700.jpg" alt="">
+                </div>
+                <div>
+                    <h2>PRESENTATION</h2>
+                    <img class="drake"
+                        src="https://pixel.nymag.com/imgs/fashion/daily/2018/06/29/29-drake.w700.h700.jpg"
+                        role="presentation">
+                </div>
+            </div>
+
+
+        </div>
+
+    </main>
+
+    <footer>
+        Built with love in San Francisco, California.
+    </footer>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="/docs/4.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+    crossorigin="anonymous"></script>
+
+</html>

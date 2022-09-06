@@ -1,0 +1,30 @@
+<div class="row align-center mb-5">
+  <div class="col-md-6">
+    <!-- Call the helper function with triple brackets to render the span as HTML -->
+    <!-- Render user-specific data with Handlebars.js expressions -->
+    {{!-- <span for="img" aria-label="book">📗</span> Amiko Vs. Treated as HTML--}}
+    {{!-- returning back <span for="img" aria-label="book">:green_book:</span> - ultimately do we want this content to be treated as HTML {{{HTML}}} (does not escape the code) or as text content {{TEXT Expression to be evaluated - as string - "escaping any character values"}} --}}
+    {{!-- Double {{}} will be escaped - renders as text &lt;<span>.... &gt; --}}
+    {{!-- Triple {{{}}} will treat it as HTML - not escape <span...> --}}
+    <h2>{{{get_emoji}}} Test User</h2>
+  </div>
+  <div class="col-md-6">
+    <h3><a href="mailto:test@gmail.com">test@gmail.com</a></h3>
+  </div>
+</div>
+<div class="row align-center mb-5">
+  <div class="col-md-6">
+    <h2>{{{get_emoji}}} Test User</h2>
+  </div>
+  <div class="col-md-6">
+    <h3><a href="mailto:test@gmail.com">test@gmail.com</a></h3>
+  </div>
+</div>
+<div class="row align-center mb-5">
+  <div class="col-md-6">
+    <h2>{{{get_emoji}}} Test User</h2>
+  </div>
+  <div class="col-md-6">
+    <h3><a href="mailto:test@gmail.com">test@gmail.com</a></h3>
+  </div>
+</div>

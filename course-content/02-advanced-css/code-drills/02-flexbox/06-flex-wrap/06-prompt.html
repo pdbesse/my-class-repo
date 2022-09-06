@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Flex Wrap</title>
+
+   <style>
+      /* APPLY YOUR CSS HERE */
+      /* ======================================== */
+
+      #parent-flex-wrap {
+         display: flex; /* sets up flexbox on this parent element */
+         align-items: center; /* aligns child elements vertically */
+         flex-wrap: wrap; /* child elements 'wrap' to next row when parent becomes too narrow */
+      }
+
+      #parent-flex-wrap-reverse {
+      }
+
+      /* ======================================== */
+
+      .parent {
+         width: 100vw;
+         height: 150px;
+         padding: 5px;
+         background-color: purple;
+         box-sizing: border-box;
+      }
+
+      .child {
+         color: white;
+         border: 1px solid white;
+         padding: 5px;
+      }
+
+      body {
+         margin: 0;
+         padding-bottom: 50px;
+      }
+   </style>
+
+</head>
+
+<body>
+
+   <!--
+      So far we've covered the following Flexbox properties:
+
+         Properties:                      Values:
+            - justify-content (horizontal)   - center
+            - align-items (vertical)         - flex-end
+                                             - flex-start
+                                             - space evenly
+                                             - space-between
+
+            - flex-direction                 - row
+                                             - row-reverse
+
+      Now we are going to add:
+
+            - flex-wrap                      - wrap
+                                             - wrap-reverse 
+
+      The Flexbox property "flex-wrap: wrap" allows us to create a parent that will dynamically force its child elements onto new rows as the screen becomes more and more narrow. For a visualization, check out the "flex-wrap.gif" file. 
+      
+      Below, #parent-flex-wrap has the "flex-wrap: wrap" property applied, so you can also open this HTML in your browser and shrink your browser window to see how the elements reorganize themselves.
+   -->
+
+   <h4>FLEX-WRAP: WRAP</h4>
+   <div id="parent-flex-wrap" class="parent">
+      <div class="child">
+         Wrapping is FUN!
+      </div>
+      <div class="child">
+         Wrapping is FUN!
+      </div>
+      <div class="child">
+         Wrapping is FUN!
+      </div>
+      <div class="child">
+         Wrapping is FUN!
+      </div>
+      <div class="child">
+         Wrapping is FUN!
+      </div>
+      <div class="child">
+         Wrapping is FUN!
+      </div>
+      <div class="child">
+         Wrapping is FUN!
+      </div>
+      <div class="child">
+         Wrapping is FUN!
+      </div>
+   </div>
+
+   <!--
+      ***** YOUR WORK STARTS HERE *****
+
+      Only add CSS. You do not need to alter the HTML. When you are done, your site should look like 05-example-image.png.
+
+      Apply the "wrap-reverse" and "row-reverse" properties to #parent-flex-wrap-reverse. The children should be on the right side and organized in reverse order. When the window size becomes more narrow, the children should 'wrap' UPWARDS into new rows. Essentially, the below HTML will be a mirror of the above example.
+   -->
+  
+   <h4>REVERSE ROW AND WRAP</h4>
+   <div id="parent-flex-wrap-reverse" class="parent">
+      <div class="child">
+         Wrapping is FUN!
+      </div>
+      <div class="child">
+         Wrapping is FUN!
+      </div>
+      <div class="child">
+         Wrapping is FUN!
+      </div>
+      <div class="child">
+         Wrapping is FUN!
+      </div>
+      <div class="child">
+         Wrapping is FUN!
+      </div>
+      <div class="child">
+         Wrapping is FUN!
+      </div>
+      <div class="child">
+         Wrapping is FUN!
+      </div>
+      <div class="child">
+         Wrapping is FUN!
+      </div>
+   </div>
+
+</body>
+
+</html>

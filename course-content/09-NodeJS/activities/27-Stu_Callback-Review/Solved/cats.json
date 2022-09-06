@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Mittens",
+    "species": "cat",
+    "age": 12
+  },
+  {
+    "name": "Sasha",
+    "species": "cat",
+    "age": 8
+  },
+  {
+    "name": "Bella",
+    "species": "cat",
+    "age": 3
+  },
+  {
+    "name": "Frank",
+    "species": "cat",
+    "age": 10
+  },
+  {
+    "name": "Bailey",
+    "species": "cat",
+    "age": 1
+  }
+]

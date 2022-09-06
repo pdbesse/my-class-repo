@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Flex Direction: Column</title>
+
+   <style>
+   /*
+      So far we've covered the following Flexbox properties:
+
+         Properties:                      Values:
+            - justify-content (horizontal)   - center
+            - align-items (vertical)         - flex-end
+                                             - flex-start
+                                             - space evenly
+                                             - space-between
+
+            - flex-direction                 - row
+                                             - row-reverse
+
+            - flex-wrap                      - wrap
+                                             - wrap-reverse 
+
+      Now we're going to add a new value for the "flex-direction" property. It was mentioned before that Flexbox defaults to "flex-drection: row", meaning that child elements will be organized in a horizontal row from left to right. But what if we want to turn that row into a column of children organized from top to bottom? For this, Flexbox gives us "flex-direction: column". 
+      
+      If you open this HTML in your browser, you'll see parts of the Transamerica Pyramid arranged in a row, but we want them arranged in a column instead.
+      
+      STEP 1:
+      -------
+      Apply the aforementioned Flexbox property to #container to rearrange these images into a column.
+
+      Step 2:
+      -------
+      After the images are properly stacked on top of each other (you should see a complete image of the Transamerica Pyramid), apply the appropriate Flexbox property to #container to horizontally center the images. This may not be as straightforward as you think (see hint below if needed).
+
+      BONUS:
+      ------
+      See below for a bonus!
+   */
+
+      #container {
+         display: flex;
+      }
+
+   /*
+      ***** HINT *****
+             |
+             |
+             |
+             |
+             |
+             |
+             |
+             |
+             |
+             |
+             |
+             |
+             |
+             |
+             |
+             |
+             v
+             
+      When you apply the "flex-direction: column" property, elements are arranged from top to bottom instead of left to right, meaning the direction has rotated by 90 degrees. However, applying this property also changes the direction of "justify-content" and "align-items" by 90 degrees, meaning that "justify-content" will handle vertical alignment and "align-items" will handle horizontal alignment. So in order to horizontally center the Transamerica Pyramid, you'll have to use "align-items" instead of "justify-content".
+   */
+
+   /*
+      BONUS:
+      ------
+      Flexbox also allows you to manually control the order of child elements using the "order" CSS property. Up to this point, we have only applied Flexbox properties to parent elements, but this is an example of a Flexbox property that gets applied to the children.
+      
+      Currently, the images are arranged in order from 1-5. Alter the order values in the CSS below to rearrange the images. Save your changes and open this HTML in your browser to observe how you affected the order of the images.
+   */
+
+      #point {
+         order: 1;
+      }
+      
+      #windows-1 {
+         order: 2;
+      }
+
+      #windows-2 {
+         order: 3;
+      }
+
+      #windows-3 {
+         order: 4;
+      }
+      
+      #base {
+         order: 5;
+      }
+      
+
+      .image {
+         height: 100px;
+         width: 400px;
+      }
+
+   </style>
+
+</head>
+<body>
+   
+   <div id="container">
+      <img class="image" src="./images/pyramid-1.png" id="point">
+      <img class="image" src="./images/pyramid-2.png" id="windows-1">
+      <img class="image" src="./images/pyramid-3.png" id="windows-2">
+      <img class="image" src="./images/pyramid-4.png" id="windows-3">
+      <img class="image" src="./images/pyramid-5.png" id="base">
+   </div>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+.btn:hover {
+  color: gray !important;
+}
+
+button,
+input {
+  box-shadow: none !important;
+}
+
+textarea {
+  box-shadow: none !important;
+  resize: none;
+}
+
+.ttip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.ttip .ttiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: transparent;
+  color: black;
+  text-align: left;
+  border-radius: 6px;
+  padding: 5px 0;
+  max-height: 150px;
+  overflow: auto;
+
+  position: absolute;
+  z-index: 1;
+}
+
+.ttip:hover {
+  cursor: pointer;
+}
+
+.ttip:hover .ttiptext {
+  visibility: visible;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Find maximum</title>
+</head>
+
+<body>
+  <script>
+    var isPalindrome = function (str) {
+      for (var i = 0; i < str.length; i++) {
+        if (str[i] !== str[str.length - (i + 1)]) {
+          return false;
+        }
+      }
+      return true;
+    }
+
+    // OR
+
+    // var isPalindrome = function (str) {
+    //   return str.split("").reverse().join("") === str;
+    // }
+
+    // OR
+
+    // var isPalindrome = function (str) {
+    //   var midPoint = Math.floor(str.length / 2);
+
+    //   for (var i = 0; i < midPoint; i++) {
+    //     if (str[i] !== str[str.length - (i + 1)]) {
+    //       return false;
+    //     }
+    //   }
+    //   return true;
+    // }
+
+    var result = isPalindrome("raecar");
+    console.log(result);
+  </script>
+</body>
+
+</html>

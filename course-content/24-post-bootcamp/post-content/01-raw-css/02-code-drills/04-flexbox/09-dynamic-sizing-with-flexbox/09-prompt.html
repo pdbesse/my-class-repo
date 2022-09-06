@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Flex</title>
+
+   <!-- READ THE INFO IN THE <body> FIRST -->
+
+   <style>
+
+      /* APPLY YOUR CSS HERE */
+      /* ======================================== */
+
+      /* PROBLEM A */
+
+      #child-1a {}
+      #child-2a {}
+      #child-3a {}
+      #child-4a {}
+      #child-5a {}
+
+      /* PROBLEM B */
+
+      #child-1b {}
+      #child-2b {}
+      #child-3b {}
+      #child-4b {}
+      #child-5b {}
+      #child-6b {}
+      #child-7b {}
+
+      /* ======================================== */
+
+
+      /* EXAMPLE CSS */
+      /* ======================================== */
+
+      .parent {
+         display: flex;
+         height: 200px;
+         width: 100vw;
+         background-color: purple;
+      }
+
+      .child {
+         margin: 10px;
+         padding: 10px;
+         color: white;
+         border: 1px solid white;
+      }
+      
+      .flex-child-1 {
+         flex: 1;
+      }
+
+      .flex-child-2 {
+         flex: 2;
+      }
+
+      .flex-child-3 {
+         flex: 3;
+      }
+
+      /* ======================================== */
+
+      body {
+         margin: 0;
+         padding-bottom: 100px;
+         letter-spacing: 1px;
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+   </style>
+
+</head>
+
+<body>
+
+   <!--
+      So far we've covered the following Flexbox properties:
+
+         Properties:                      Values:
+            - justify-content (horizontal)   - center
+            - align-items (vertical)         - flex-end
+                                             - flex-start
+                                             - space evenly
+                                             - space-between
+
+            - flex-direction                 - row
+                                             - row-reverse
+                                             - column
+                                             - column-reverse
+
+            - flex-wrap                      - wrap
+                                             - wrap-reverse
+                                          
+            - order                          - <number value>
+
+      All of these properties are applied to parent elements to control how their children are positioned, except for "order", which is applied to multiple child elements to control their order. Now we are going to learn another property that gets applied to the child elements. It's just called "flex".
+      
+      EXAMPLE 1:
+      ----------
+      In this example, the parent element has 4 children. If you open this HTML in your browser, you'll see that each child element takes up 1/4 of the space available in the parent. This is because each child has the "flex-child-1" class, which (as defined in the example CSS above) means each child element has "flex: 1" applied.
+
+      So how do we know that "flex: 1" means that each child will take up 1/4th of the space? For this, we look at all the children that have the "flex" CSS property applied and add up their values. In this case, all the children have "flex: 1" applied and it adds up to 4, so each child takes up 1/4 of the parent element.
+   -->
+
+   <h4>EXAMPLE 1 ( TOTAL = 4 )</h4>
+   <div class="parent">
+      <div class="child flex-child-1">
+         CSS: "flex: 1"
+      </div>
+      <div class="child flex-child-1">
+         CSS: "flex: 1"
+      </div>
+      <div class="child flex-child-1">
+         CSS: "flex: 1"
+      </div>
+      <div class="child flex-child-1">
+         CSS: "flex: 1"
+      </div>
+   </div>
+
+   <!--
+      EXAMPLE 2:
+      ----------
+      In this example, the children have different "flex" values. Two children have "flex: 1", two children have "flex: 2", and one child has "flex: 3". In total, these add up to 9. This means that the children with "flex: 1" will take up 1/9 of the space available in the parent, children with "flex: 2" will take up 2/9, and the child with "flex: 3" will take up 3/9.
+
+      One of the best features of the "flex" property is that it is responsive. Open this HTML in your browser and reduce the size of your browser window. You should see that no matter what the screen size is, the children always take up 1/9, 2/9, or 3/9 of the parent (based on their "flex" vlaue).
+   -->
+
+   <h4>EXAMPLE 2 ( TOTAL = 9 )</h4>
+   <div class="parent">
+      <div class="child flex-child-1">
+         1/9
+      </div>
+      <div class="child flex-child-2">
+         2/9
+      </div>
+      <div class="child flex-child-3">
+         3/9
+      </div>
+      <div class="child flex-child-2">
+         2/9
+      </div>
+      <div class="child flex-child-1">
+         1/9
+      </div>
+   </div>
+
+   <!--
+      ***** YOUR WORK STARTS HERE *****
+      
+      Only add CSS. You do not need to alter the HTML. When you are done, your site should look like 09-example-image.png.
+
+      PROBLEM A
+      ----------
+      Apply the "flex" property to each child element to accomplish the following:
+
+         - #child-1a should take up 1/10 of the parent
+
+         - #child-2a should take up 3/10 of the parent
+
+         - #child-3a should take up 2/10 of the parent
+
+         - #child-4a should take up 3/10 of the parent
+
+         - #child-5a should take up 3/10 of the parent
+         
+   -->
+
+   <h4>PROBLEM A</h4>
+   <div class="parent">
+      <div class="child" id="child-1a">
+         1/10
+      </div>
+      <div class="child" id="child-2a">
+         3/10
+      </div>
+      <div class="child" id="child-3a">
+         2/10
+      </div>
+      <div class="child" id="child-4a">
+         3/10
+      </div>
+      <div class="child" id="child-5a">
+         1/10
+      </div>
+   </div>
+   
+   
+   <!--
+      PROBLEM B
+      ----------
+      Apply the "flex" property to each child element to accomplish the following:
+         
+         - #child-1b should take up one eighth of the parent
+
+         - #child-2b should take up 1/24th of the parent
+
+         - #child-3b should take up one twelfth of the parent
+
+         - #child-4b should take up one half of the parent
+
+         - #child-5b should take up one twelfth of the parent
+
+         - #child-6b should take up 1/24th of the parent
+
+         - #child-7b should take up one eighth of the parent
+   -->
+
+   <h4>PROBLEM B</h4>
+   <div class="parent">
+      <div class="child" id="child-1b"></div>
+      <div class="child" id="child-2b"></div>
+      <div class="child" id="child-3b"></div>
+      <div class="child" id="child-4b"></div>
+      <div class="child" id="child-5b"></div>
+      <div class="child" id="child-6b"></div>
+      <div class="child" id="child-7b"></div>
+   </div>
+
+</body>
+
+</html>

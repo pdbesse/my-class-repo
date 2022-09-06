@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Positioning Many Child Elements</title>
+
+   <style>
+      /* APPLY YOUR CSS HERE */
+      /* ======================================== */
+
+      #parent-center {
+         display: flex;
+         justify-content: center;
+         background-color: purple;
+         padding: 20px 0;
+      }
+
+      #parent-even-spacing {
+         background-color: purple;
+         padding: 20px 0;
+      }
+
+      #parent-spacing-between {
+         background-color: purple;
+         padding: 20px 0;
+      }
+
+      .child {
+         color: white;
+         border: 1px solid white;
+         padding: 5px;
+      }
+
+      /* ======================================== */
+   </style>
+
+</head>
+
+<body>
+
+   <!--
+      #parent-center already has the "justify-content: center" property applied. If you open this HTML in your browser, you'll see that all the children of #parent-center are centered but without any space between them.
+   -->
+   <h4>CENTER:</h4>
+   <div id="parent-center">
+      <div class="child">
+         We want to be in the center!
+      </div>
+      <div class="child">
+         We want to be in the center!
+      </div>
+      <div class="child">
+         We want to be in the center!
+      </div>
+   </div>
+   <br>
+   <hr>
+
+   <!--
+      ***** YOUR WORK STARTS HERE *****
+      
+      Only add CSS. You do not need to alter the HTML. When you are done, your site should look like 03-example-image.png.
+
+
+      Flexbox gives us tools to apply even spacing for all the child elements of a shared parent. To do this, we use the CSS property "justify-content: space-evenly". Apply this CSS styling to the HTML below to evenly space the child elements.
+   -->
+   
+   <h4>EVENLY SPACED:</h4>
+   <div id="parent-even-spacing">
+      <div class="child">
+         We want to be spaced evenly!
+      </div>
+      <div class="child">
+         We want to be spaced evenly!
+      </div>
+      <div class="child">
+         We want to be spaced evenly!
+      </div>
+   </div>
+   <br>
+   <hr>
+
+   <!--
+      Flexbox also gives us tools to apply even spacing BETWEEN all the child elements without any space left on the edges. To do this, we use the CSS property "justify-content: space-between". Apply this CSS styling to the HTML below to create even spacing between each of the child elements.
+   -->
+   <h4>SPACED BETWEEN:</h4>
+   <div id="parent-spacing-between">
+      <div class="child">
+         We want even spacing between us!
+      </div>
+      <div class="child">
+         We want even spacing between us!
+      </div>
+      <div class="child">
+         We want even spacing between us!
+      </div>
+   </div>
+
+   <!--
+      BONUS: You could also apply the "justify-content: flex-start" or "justify-content: flex-end" properties to these groups of child elements. This would force the whole group of children to be positioned at the start (left) or end (right) of their parent. Try it out!
+   -->
+
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+* {
+  /*//https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing*/
+  /*The box-sizing CSS property sets how the total width and height of an element is calculated.*/
+  /*The width and height properties include the content, padding, and border, but do not include the margin.*/
+  /*border-box tells the browser to account for any border and padding in the values you specify for an element's width and height. If you set an element's width to 100 pixels, that 100 pixels will include any border or padding you added, and the content box will shrink to absorb that extra width. This typically makes it much easier to size elements.*/
+ 
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+header {
+  padding: 40px;
+  text-align: center;
+  background: #13293d;
+  color: #fff;
+}
+
+/* 
+What happens when we set the display property to flex?
+The flex container becomes flexible 
+The child items of the container all move into a row and take 
+only as much space as they need to display their contents.
+*/
+nav {
+  display: flex;
+  background-color: #d8a47f;
+}
+
+nav a {
+  color: #13293d;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* 
+What is the flex-wrap property?
+It specifies whether the flex items should wrap or not 
+The value can be set to nowrap, wrap-reverse, or wrap
+See https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap for more information
+*/
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+aside {
+  flex: 1;
+  background-color: #b9c6ae;
+  padding: 80px;
+  text-align: center;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #13293d;
+  color: #fff;
+}
+
+/* 
+What does the justify-content property do?
+It is used to align the flex items; in our case, the product cards
+It aligns the flex items and distributes the empty space between them. 
+In this activity, we are telling the product cards to be centered:
+*/
+
+/* This is the shorthand for flex-grow, flex-shrink and flex-basis combined. 
+The second and third parameters (flex-shrink and flex-basis) are optional. 
+The default is 0 1 auto, but if you set it with a single number value, 
+like flex: 4;, that changes the flex-basis to 0%, so it’s like setting 
+flex-grow: 4; flex-shrink: 1; flex-basis: 0%;. */
+.products {
+  flex: 4;
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* 
+What is the flex property a shorthand property for?
+It is a shorthand property for the flex-grow, flex-shrink, and flex-basis properties 
+What is it doing here?
+We are making the product card not growable, not shrinkable, and with an initial length of 400px 
+*/
+.card {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  padding: 10px;
+  flex: 0 0 400px;
+}
+
+.card header {
+  padding: 20px;
+}
+
+.card p {
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+}
+
+/* 
+What does the flex-direction property define?
+It defines in which direction the container wants to stack the flex items
+What is it doing here? 
+We are telling the main body and navbar to stack vertically in a column
+*/
+@media screen and (max-width: 768px) {
+  main,
+  nav {
+    flex-direction: column;
+  }
+}
+
+

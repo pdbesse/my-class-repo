@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Zip Arrays</title>
+</head>
+
+<body>
+  <script>
+    function zipArrays(arr1, arr2) {
+
+      var length = Math.max(arr1.length, arr2.length);
+      var newArr = [];
+      for (var i = 0; i < length; i++) {
+        if (!isNaN(arr1[i]) && !isNaN(arr2[i])) {
+          newArr.push(arr1[i] + arr2[i]);
+        } else {
+          if (!isNaN(arr1[i])) {
+            newArr.push(arr1[i])
+          } else {
+            newArr.push(arr2[i])
+          }
+        }
+      }
+      return newArr;
+
+    }
+  </script>
+</body>
+
+</html>

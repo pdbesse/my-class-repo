@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Enter your description here" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+
+  <title>Bootstrap Utilities</title>
+</head>
+
+<body>
+  <!-- We can center a page's content vertically and horizontally by making the page have a minimum height set to the height of the page and making it a flexbox: -->
+  <!--  Bootstrap has a list of preset color classes for backgrounds and text, which can be helpful when we need some contrast on a page. -->
+  <!-- vh Relative to 1% of the height of the viewport* -->
+  <div class="min-vh-100 d-flex align-items-center bg-dark">
+    <!-- Apply display utilities to create a flexbox container and transform direct children elements into flex items. Flex containers and items are able to be modified further with additional flex properties. -->
+    <section class="w-100 row justify-content-center">
+      <!-- Sizing Width and height utilities are generated from the $sizes Sass map in _variables.scss. Includes support for 25%, 50%, 75%, and 100% by default.-->
+      <div class="col-10 col-md-6 col-lg-5">
+        <!-- The spacing properties for margin and padding can be extremely useful to create or remove space in areas instead of needing to use custom CSS. -->
+        <!-- Display headings When you need a heading to stand out, consider using a display heading—a larger, slightly more opinionated heading style. -->
+        <h1 class="display-3 text-center text-white">Sign Up!</h1>
+        <!-- Add classes to apply a white background, rounded corners, padding, and margin on the y-axis (top and bottom) 4 - (by default) for classes that set the margin or padding to $spacer * 1.5 => 16px-->
+        <form class="bg-white my-4 p-4 rounded">
+          <h3>Fill out the form and get started!</h3>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" class="form-control" placeholder="Username" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" id="email" class="form-control" placeholder="Username" required />
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="text" id="password" class="form-control" placeholder="Password" required />
+          </div>
+
+          <div class="form-group">
+            <label for="referral">Where did you hear about us?</label>
+            <select class="form-control" id="referral">
+              <option disabled selected>Pick One...</option>
+              <option>Social Media</option>
+              <option>Friend/Colleague</option>
+              <option>Billboard</option>
+              <option>Magazine/Email Ad</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="yes" id="mailing-list">
+              <label class="form-check-label" for="mailing-list">
+                Sign up for the mailing list?
+              </label>
+            </div>
+          </div>
+
+          <button class="btn btn-block btn-success">Complete Signup!</button>
+        </form>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+
+</html>

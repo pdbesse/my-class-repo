@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Reverse words</title>
+</head>
+
+<body>
+  <script>
+
+var titleCase = function(str) {
+  var result = [];
+
+  var words = str.split(" ");
+
+  for (var i = 0; i < words.length; i++) {
+    var word = words[i].split("");
+
+    word[0] = word[0].toUpperCase();
+
+    result.push(word.join(""));
+  }
+
+  return result.join(" ");
+};
+
+    var result = titleCase("you are great!");
+    console.log(result);
+  </script>
+</body>
+
+</html>

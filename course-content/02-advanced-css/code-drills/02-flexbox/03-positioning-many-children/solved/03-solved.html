@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Positioning Many Child Elements</title>
+
+   <style>
+      /* SOLUTION CSS */
+      /* ======================================== */
+
+      #parent-center {
+         display: flex;
+         justify-content: center;
+         background-color: purple;
+         padding: 20px 0;
+      }
+
+      #parent-even-spacing {
+         display: flex;
+         justify-content: space-evenly;
+         background-color: purple;
+         padding: 20px 0;
+      }
+
+      #parent-spacing-between {
+         display: flex;
+         justify-content: space-between;
+         background-color: purple;
+         padding: 20px 0;
+      }
+
+      .child {
+         color: white;
+         border: 1px solid white;
+         padding: 5px;
+      }
+
+      /* ======================================== */
+   </style>
+
+</head>
+
+<body>
+
+   <h4>CENTER:</h4>
+   <div id="parent-center">
+      <div class="child">
+         We want to be in the center!
+      </div>
+      <div class="child">
+         We want to be in the center!
+      </div>
+      <div class="child">
+         We want to be in the center!
+      </div>
+   </div>
+   <br>
+   <hr>
+
+   <h4>EVENLY SPACED:</h4>
+   <div id="parent-even-spacing">
+      <div class="child">
+         We want to be spaced evenly!
+      </div>
+      <div class="child">
+         We want to be spaced evenly!
+      </div>
+      <div class="child">
+         We want to be spaced evenly!
+      </div>
+   </div>
+   <br>
+   <hr>
+
+   <h4>SPACED BETWEEN:</h4>
+   <div id="parent-spacing-between">
+      <div class="child">
+         We want even spacing between us!
+      </div>
+      <div class="child">
+         We want even spacing between us!
+      </div>
+      <div class="child">
+         We want even spacing between us!
+      </div>
+   </div>
+
+</body>
+
+</html>

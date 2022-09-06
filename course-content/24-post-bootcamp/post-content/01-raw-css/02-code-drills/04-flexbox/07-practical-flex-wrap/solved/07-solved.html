@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Flex Wrap: Image Gallery</title>
+
+   <style>
+
+      /* SOLUTION CSS */
+      /* ============================== */
+
+      #image-grid {
+         max-width: 1100px; /* Ensures #image-grid <div> is never more than 1100px wide. This is good because we do not want our image grid to spread out into a single long row on wide screens. */
+
+         display: flex; /* Set up Flexbox on this parent element. */
+
+         justify-content: center; /* Horizontally center child elements in #image-grid */
+
+         flex-wrap: wrap; /* Forces children to 'wrap' onto new row when screen becomes more and more narrow. */
+      }
+
+      #container {
+         display: flex; /* Set up Flexbox on this parent element. */
+         
+         justify-content: center; /* Horizontally center #image-grid inside of #container */
+      }
+
+      /* ============================== */
+
+      img {
+         height: 200px;
+         width: 200px;
+         margin: 20px;
+         transition: box-shadow 300ms;
+      }
+
+      img:hover {
+         box-shadow: 0 0 15px rgb(111, 111, 111);
+      }
+
+      body {
+         margin: 0;
+      }
+   </style>
+
+</head>
+
+<body>
+
+   <div id="container">
+      <div id="image-grid">
+         <img src="https://via.placeholder.com/200/355c7d/ffffff" alt="placeholder-image">
+         <img src="https://via.placeholder.com/200/6c5b7b/ffffff" alt="placeholder-image">
+         <img src="https://via.placeholder.com/200/c06c84/ffffff" alt="placeholder-image">
+         <img src="https://via.placeholder.com/200/f67280/ffffff" alt="placeholder-image">
+         <img src="https://via.placeholder.com/200/355c7d/ffffff" alt="placeholder-image">
+         <img src="https://via.placeholder.com/200/6c5b7b/ffffff" alt="placeholder-image">
+         <img src="https://via.placeholder.com/200/c06c84/ffffff" alt="placeholder-image">
+         <img src="https://via.placeholder.com/200/f67280/ffffff" alt="placeholder-image">
+         <img src="https://via.placeholder.com/200/355c7d/ffffff" alt="placeholder-image">
+         <img src="https://via.placeholder.com/200/6c5b7b/ffffff" alt="placeholder-image">
+         <img src="https://via.placeholder.com/200/c06c84/ffffff" alt="placeholder-image">
+         <img src="https://via.placeholder.com/200/f67280/ffffff" alt="placeholder-image">
+      </div>
+   </div>
+
+</body>
+
+</html>

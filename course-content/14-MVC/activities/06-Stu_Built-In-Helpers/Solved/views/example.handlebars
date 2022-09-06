@@ -1,0 +1,258 @@
+<div class="menu-container">
+  <div class="dish col-md-6">
+     
+      <h1> Truthy</h1>
+      <h4> Nested Farley</h4>
+      <p>
+        {{#with nestedCat}}
+          {{firstname}} {{lastname}}
+        {{/with}}
+      </p>
+      <p>  
+        In JavaScript, a truthy value is a value that is considered true when encountered in a Boolean context.
+        </p>
+      <p>  
+        All values are truthy unless they are defined as falsy (i.e., except for false, 0, -0, 0n, "", null, undefined, and NaN).
+      </p>
+      <p>
+         If its argument returns false, undefined, null, "", 0, or [], Handlebars will not render the block.
+      </p>
+       <p>
+         Note: Nagative Numbers and Empty Arrays are treated as Falsy in Handlebars.
+
+      </p>
+      
+      {{!-- boolTrue: true,  --}}
+      <p> 
+      {{boolTrue}}    <!-- This code will be rendered if the condition is truthy -->
+        {{#if boolTrue}}
+              <span >
+                ✅ 
+              <span >
+          {{else}}
+             <span >
+               🔴
+              </span>
+          {{/if}}
+
+      </p>
+      {{!-- truthyStr: "str",  --}}
+      <p> 
+      {{truthyStr}}    <!-- This code will be rendered if the condition is truthy -->
+        {{#if truthyStr}}
+              <span >
+                ✅ 
+              <span >
+          {{else}}
+             <span >
+               🔴
+              </span>
+          {{/if}}
+
+      </p>
+      {{!-- truthyNum: 42, --}}
+      <p> 
+      {{truthyNum}}    <!-- This code will be rendered if the condition is truthy -->
+        {{#if truthyNum}}
+              <span >
+                ✅ 
+              <span >
+          {{else}}
+             <span >
+               🔴
+              </span>
+          {{/if}}
+
+      </p>
+      
+      
+      
+      {{!-- truthyObj: {} --}}
+      <p> 
+      truthyStrFalse: "false"   <!-- This code will be rendered if the condition is truthy -->
+        {{#if truthyStrFalse}}
+              <span >
+                ✅ 
+              <span >
+          {{else}}
+             <span >
+               🔴
+              </span>
+          {{/if}}
+
+      </p>
+      
+      {{!-- truthyObj: {} --}}
+      <p> 
+      truthyObj: {}   <!-- This code will be rendered if the condition is truthy -->
+        {{#if truthyObj}}
+              <span >
+                ✅ 
+              <span >
+          {{else}}
+             <span >
+               🔴
+              </span>
+          {{/if}}
+
+      </p>
+      
+      {{!-- truthyNum === 42 --}}
+      <p> 
+      truthyNum === 42  - Not in Handlbars 🔴<!-- This code will be rendered if the condition is truthy -->
+
+      </p>
+
+     
+    </div>
+
+    
+    
+    
+    {{!--  END TRUTHY--}}
+
+  <div class="dish col-md-6">
+      <h1> Falsy</h1>
+      <h4> Nested Kiddos</h4>
+      <p>
+        {{#with nestedKiddos}}
+          {{first}} & {{second}}
+        {{/with}}
+      </p>
+      <p>  
+        A falsy (sometimes written falsey) value is a value that is considered false when encountered in a Boolean context. 
+      </p>
+      <p>  
+        All values are truthy unless they are defined as falsy (i.e., except for false, 0, -0, 0n, "", null, undefined, and NaN).
+      </p>
+      <p>
+         If its argument returns false, undefined, null, "", 0, or [], Handlebars will not render the block.
+      </p>
+      {{!-- boolFalse: false, --}}
+      <p> 
+      boolFalse: false
+      <!-- This code will be rendered if the condition is truthy -->
+        {{#if boolFalse}}
+              <span >
+                ✅ 
+              <span >
+          {{else}}
+             <span >
+               🔴
+              </span>
+          {{/if}}
+
+      </p>
+
+      {{!-- falsyZero: 0,  --}}
+      <p> 
+      falsyZero: 0,
+      <!-- This code will be rendered if the condition is truthy -->
+        {{#if falsyZero}}
+              <span >
+                ✅ 
+              <span >
+          {{else}}
+             <span >
+               🔴
+              </span>
+          {{/if}}
+
+      </p>
+      {{!-- truthyNegNum: -42, --}}
+      <p> 
+      falsyNegNum: -42  <!-- This code will be rendered if the condition is truthy -->
+        {{#if falsyNegNumNum}}
+              <span >
+                ✅ 
+              <span >
+          {{else}}
+             <span >
+               🔴
+              </span>
+          {{/if}}
+
+      </p>
+
+      {{!-- falsyZero: undefined,  --}}
+      <p> 
+      falsyZero: undefined
+      <!-- This code will be rendered if the condition is truthy -->
+        {{#if falsyZero}}
+              <span >
+                ✅ 
+              <span >
+          {{else}}
+             <span >
+               🔴
+              </span>
+          {{/if}}
+
+      </p>
+
+      {{!-- falsyNull: null, --}}
+      <p> 
+      falsyNull: null
+      <!-- This code will be rendered if the condition is truthy -->
+        {{#if falsyNull}}
+              <span >
+                ✅ 
+              <span >
+          {{else}}
+             <span >
+               🔴
+              </span>
+          {{/if}}
+
+      </p>
+
+      {{!--  falsyStr: '',  --}}
+      <p> 
+      falsyStr: "' '"
+      <!-- This code will be rendered if the condition is truthy -->
+        {{#if falsyStr}}
+              <span >
+                ✅ 
+              <span >
+          {{else}}
+             <span >
+               🔴
+              </span>
+          {{/if}}
+
+      </p>
+      {{!-- truthyArr: [], --}}
+      <p> 
+      truthyArr: []   <!-- This code will be rendered if the condition is truthy -->
+        {{#if truthyArr}}
+              <span >
+                ✅ 
+              <span >
+          {{else}}
+             <span >
+               🔴
+              </span>
+          {{/if}}
+
+      </p>
+
+      {{!-- Comparisions --}}
+      <p> 
+      2 > 1 - Not in Handlbars 🔴
+     
+      </p>
+
+    </div>
+  </div>
+   {{!--  END FALSY--}}
+
+</div>
+
+
+    
+    
+    
+  
+    
+   
+    

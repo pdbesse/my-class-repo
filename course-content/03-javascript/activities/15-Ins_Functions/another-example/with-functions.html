@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Superhero Logging - With Functions</title>
+  </head>
+  <body>
+
+    <h1>Open the console to see the magic!</h1>
+
+    <script type="text/javascript">
+
+      // VARIABLES
+      // =======================================================================================
+
+      // Various Arrays
+
+      var brands = ["Acer", "Apple", "Sony", "Samsung"];
+      var heroes = ["Black Panther", "Cyborg", "Black Canary", "Donna Troy", "Huntress", "Blue Beetle", "Captain Atom"];
+      var booksOnMyShelf = ["Calculus Early Transcendentals", "Ravens", "The Self Illusion", "Harry Potter"];
+      var thingsInFrontOfMe = ["Laptop", "Beanbag", "Cats", "Slippers"];
+      var howIFeel = ["Sleep Deprived", "Wired on Coffee", "Excited"];
+
+      // FUNCTIONS
+      // ========================================================================================
+
+      // Here we create a "Function" that allows us to "call" (run) the loop for any array we wish.
+
+    
+      // We pass in an array as an "argument".
+      function consoleInside(arr) {
+
+        // We then loop through the selected array.
+        for (var i = 0; i < arr.length; i++) {
+
+          // Each time we print the value inside the array.
+          console.log(arr[i]);
+        }
+        console.log("---------");
+      }
+
+      // FUNCTION CALLS (Execution)
+      // =======================================================================================
+
+      // Here we call the function to run our for-loop code on each of the following arrays.
+      // console.log(consoleInside);
+
+      consoleInside(brands);
+      consoleInside(heroes);
+      consoleInside(booksOnMyShelf);
+      consoleInside(thingsInFrontOfMe);
+      consoleInside(howIFeel);
+
+
+    console.log(thing);//undefined - Hoisted
+    var thing = "cat";
+    console.log(thing);//'cat'
+
+    // funExpression("Farley");//with-functions.html:59 Uncaught TypeError: funExpression is not a function
+
+     var funExpression = function(params){
+        console.log("Hello " + params);
+      };
+
+     funExpression("Farley");
+
+     declaration("Asher Baby Before");//hoisted 
+
+     function declaration(placeholder){
+      console.log("Hello " + placeholder);
+     };
+
+     declaration("Asher Baby After");
+
+
+     function funDeclaration(){
+      console.log("Hello Kitty" );
+     };
+
+     funDeclaration()
+
+    </script>
+
+  </body>
+</html>

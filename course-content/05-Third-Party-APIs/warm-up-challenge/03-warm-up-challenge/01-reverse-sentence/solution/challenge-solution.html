@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Find maximum</title>
+</head>
+
+<body>
+  <script>
+    function reverse(str) {
+      // Split the sentence on the spaces in order to seperate the words
+      var tempArr = str.split(" ")
+
+      // reverse the array we just made
+      tempArr = tempArr.reverse();
+
+      // join the array together into a string with a space between each element
+      var reversedStr = tempArr.join(" ");
+      return reversedStr;
+    }
+
+    var result = reverse("it does not matter how slowly you go as long as you do not stop");
+    console.log(result);
+  </script>
+</body>
+
+</html>

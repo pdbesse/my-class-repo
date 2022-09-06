@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Flex Wrap</title>
+
+   <style>
+      /* SOLUTION CSS */
+      /* ======================================== */
+
+      #parent-flex-wrap {
+         display: flex; /* sets up flexbox on this parent element */
+         align-items: center; /* aligns child elements vertically */
+         flex-wrap: wrap; /* child elements 'wrap' to next row when parent becomes too narrow */
+      }
+
+      #parent-flex-wrap-reverse {
+         display: flex;
+         align-items: center;
+         flex-wrap: wrap-reverse;
+         flex-direction: row-reverse;
+      }
+
+      /* ======================================== */
+
+      .parent {
+         width: 100vw;
+         height: 150px;
+         padding: 5px;
+         background-color: purple;
+         box-sizing: border-box;
+      }
+
+      .child {
+         color: white;
+         border: 1px solid white;
+         padding: 5px;
+      }
+
+      body {
+         margin: 0;
+         padding-bottom: 50px;
+      }
+   </style>
+
+</head>
+
+<body>
+
+   <h4>FLEX-WRAP: WRAP</h4>
+   <div id="parent-flex-wrap" class="parent">
+      <div class="child">
+         Wrapping is FUN!
+      </div>
+      <div class="child">
+         Wrapping is FUN!
+      </div>
+      <div class="child">
+         Wrapping is FUN!
+      </div>
+      <div class="child">
+         Wrapping is FUN!
+      </div>
+      <div class="child">
+         Wrapping is FUN!
+      </div>
+      <div class="child">
+         Wrapping is FUN!
+      </div>
+      <div class="child">
+         Wrapping is FUN!
+      </div>
+      <div class="child">
+         Wrapping is FUN!
+      </div>
+   </div>
+
+  
+   <h4>REVERSE ROW AND WRAP</h4>
+   <div id="parent-flex-wrap-reverse" class="parent">
+      <div class="child">
+         Wrapping is FUN!
+      </div>
+      <div class="child">
+         Wrapping is FUN!
+      </div>
+      <div class="child">
+         Wrapping is FUN!
+      </div>
+      <div class="child">
+         Wrapping is FUN!
+      </div>
+      <div class="child">
+         Wrapping is FUN!
+      </div>
+      <div class="child">
+         Wrapping is FUN!
+      </div>
+      <div class="child">
+         Wrapping is FUN!
+      </div>
+      <div class="child">
+         Wrapping is FUN!
+      </div>
+   </div>
+
+</body>
+
+</html>

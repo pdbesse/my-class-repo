@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Find maximum</title>
+</head>
+
+<body>
+  <script>
+
+    var findMax = function (numArr) {
+
+      var maxNum = numArr[0];
+      for (var i = 1; i < numArr.length; i++) {
+        if (numArr[i] > maxNum) {
+          maxNum = numArr[i];
+        }
+      }
+      return maxNum;
+    }
+    var result = findMax([1, 6, 3]);
+    console.log(result);
+  </script>
+</body>
+
+</html>

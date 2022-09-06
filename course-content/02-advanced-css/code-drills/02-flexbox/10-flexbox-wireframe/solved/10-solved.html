@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Flexbox Wireframe</title>
+
+   <style>
+
+      /* APPLY YOUR CSS HERE */
+      /* ======================================== */
+
+      nav {
+         display: flex; /* Sets up <nav> as a Flexbox element */
+
+         justify-content: space-between; /* Adds even spacing between each of <nav>'s child elements. Because <nav> only has 2 children in the HTML below, it adds one big chunk of spacing between them, forcing the two child elements to either end of the <nav>. */
+      }
+
+      main {
+         display: flex; /* <main> has two children, <section> and <aside>, which are both block elements. This means they will stack on top of each other by default. We add "display: flex" to their parent element, <main>, because the default Flexbox behavior is for children to be aligned in a row. So adding "display: flex" places <section> and <aside> next to each other instead of stacked on each other. */
+      }
+
+      section {
+         flex: 7; /* When we add "display: flex" to the parent, <main>, this <section> becomes quite narrow, so we add a "flex" value of 7 to this element to adjust what proportion of <main> it should fill relative to the other child, <aside>, which has "flex: 4". */
+
+         display: flex; /* We want <section>'s child element, <article>, to fill all the available space. We accomplish this by giving <article> a "flex" value of 1 (seen in the CSS for <article> below). But <article>'s "flex: 1" property will only work if the parent element also has the "display: flex" value. So we add that here. */
+
+         flex-direction: column; /* Adding "display: flex" will force <article> to awkwardly display in a row, so we add "flex-direction: column" here to force it back to the desired positioning. */
+      }
+
+      article {
+         display: flex; /* We want <article>'s child elements (which are two <div>s) to fill all the available space. We accomplish this by giving each <div> "flex: 1" (seen in the CSS for "article div" below). But these <div>s' "flex" properties will only work if their parent element also has the "display: flex" value. So we add that here. */
+
+         flex-direction: column; /* Adding "display: flex" will force the <div>s to awkwardly display in a row, so we add "flex-direction: column" here to force them back to the desired positioning. */
+
+         flex: 1; /* We want this <article> to fill all the available space in its parent element, so we give it a "flex" value of 1. <article> is the only child of <section>, so it will take up 1/1 (or 100%) of the available space. */
+      }
+
+      article div { /* This CSS selector will select all <div> elements that are inside an <article> element. */
+
+         display: flex; /* We want to horizontally and vertically center the text in these <div> elements, so we set up Flexbox on them first. */
+
+         justify-content: center; /* Horizontally centers the text. */
+
+         align-items: center; /* Vertically centers the text. */
+
+         flex: 1; /* This styling is being applied to two different <div> elements (because there are two <div>s inside of <article>. They both get "flex: 1", meaning they will each take up 1/2 (or 50%) of the space available in their parent element, <article>. */
+      }
+
+      aside {
+         flex: 4; /* When we add "display: flex" to the parent, <main>, this <aside> becomes too wide, so we add a "flex" value of 4 to this element to adjust what proportion of <main> it should fill relative to the other child, <section>, which has "flex: 7". */
+
+         display: flex; /* We want <aside>'s child elements (which are three <div>s) to fill all the available space. We accomplish this by giving each <div> its own "flex" value (seen in the CSS for each <div>'s ID below). But these <div>s' "flex" properties will only work if their parent element also has the "display: flex" value. So we add that here. */
+
+         flex-direction: column; /* Adding "display: flex" will force the <div>s to awkwardly display in a row, so we add "flex-direction: column" here to force them back to the desired positioning. */
+      }
+
+      aside div { /* This CSS selector will select all <div> elements that are inside an <aside> element. */
+
+         display: flex; /* We want to horizontally and vertically center the text in these <div> elements, so we set up Flexbox on them first. */
+
+         justify-content: center; /* Horizontally centers the text. */
+
+         align-items: center; /* Vertically centers the text. */
+      }
+
+      #aside-1 {
+         flex: 1; /* This is the first <div> inside of <aside>, which we want to be shorter than the second <div>, so we give it a "flex" value of 1. */
+      }
+
+      #aside-2 {
+         flex: 5; /* This is the second <div> inside of <aside>, which we want to be taller than the other two <div>s, so we give it a "flex" value of 5. */
+      }
+
+      #aside-3 {
+         flex: 1; /* This is the third <div> inside of <aside>, which we want to be shorter than the second <div> and the same size as the first <div>, so we give this one a "flex" value of 1 too. */
+      }
+
+      /* ======================================== */
+   </style>
+
+   <link rel="stylesheet" href="../starter.css">
+
+</head>
+
+<body>
+   <div class="container">
+      <header>
+         Jane Doe
+      </header>
+      <nav>
+         <span>Wireframe!</span>
+         <span>About | Portfolio | Contact</span>
+      </nav>
+      <main>
+         <section>
+            section
+            <article>
+               article
+               <div>
+                  h1, h2, h3
+               </div>
+               <div>
+                  p
+               </div>
+            </article>
+         </section>
+         <aside>
+            aside
+            <div id="aside-1">
+               Lorem ipsum dolor sit amet consectetur.
+            </div>
+            <div id="aside-2">
+               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            </div>
+            <div id="aside-3">
+               Lorem ipsum dolor sit amet consectetur.
+            </div>
+         </aside>
+      </main>
+      <footer>
+         footer
+      </footer>
+   </div>
+</body>
+
+</html>

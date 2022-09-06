@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Positioning with Flexbox</title>
+
+   <style>
+      /* APLLY YOUR CSS HERE */
+      /* ======================================== */
+
+      #parent-center {
+         background-color: rgb(128, 0, 128);
+      }
+
+      #parent-left {
+         background-color: rgb(0, 0, 201);
+      }
+
+      #parent-right {
+         background-color: rgb(201, 0, 0);
+      }
+
+      .child {
+         color: white;
+      }
+
+      /* ======================================== */
+   </style>
+
+</head>
+
+<body>
+
+   <!--
+      If you open this HTML in your browser, you'll see that the elements are all in their default positions. Follow the instructions below to position them using flexbox. Only add CSS. You do not need to alter the HTML. When you are done, your site should look like 02-example-image.png.
+
+
+      ***** YOUR WORK STARTS HERE: *****
+
+      1.) In the <head> above, apply the CSS properties "display: flex" and "justify-content: center" to place the child in the center of #parent-center (feel free to refer back to the example in 01-flexbox-examples).
+   -->
+   <h4>1.) CENTER:</h4>
+   <div id="parent-center">
+      <div class="child">
+         I want to be in the center!
+      </div>
+   </div>
+
+   <br>
+   <hr>
+
+
+   <!--
+      You can apply different values to the "justify-content" property. Instead of "center",you can use "justify-content: flex-start" or "justify-content: flex-end". These will force child elements to the start (left) or end (right) of their parent elements, respectively. This is similar to using "float: left" or "float: right" on an element.
+   -->
+
+
+   <!-- 2.) In the <head> above, apply flexbox styles to move this child to the LEFT -->
+   <h4>2.) LEFT:</h4>
+   <div id="parent-left">
+      <div class="child">
+         I want to be on the left!
+      </div>
+   </div>
+   
+   <br>
+   <hr>
+
+
+   <!-- 3.) In the <head> above, apply flexbox styles to move this child to the RIGHT -->
+   <h4>3.) RIGHT:</h4>
+   <div id="parent-right">
+      <div class="child">
+         I want to be on the right!
+      </div>
+   </div>
+
+
+</body>
+
+</html>
